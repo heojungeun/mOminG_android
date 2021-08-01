@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108190081353",
+    "firebase_url": "https://moming-654fe-default-rtdb.firebaseio.com",
+    "project_id": "moming-654fe",
+    "storage_bucket": "moming-654fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108190081353:android:628ea95a7e94fdcda1fa98",
+        "android_client_info": {
+          "package_name": "com.example.moming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108190081353-eqorr27s5k4natj42p14566c7bvul0f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeMkxmyC3lbjeHG1hDw_6wyk5mYATO-L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108190081353-eqorr27s5k4natj42p14566c7bvul0f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
