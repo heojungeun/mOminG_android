@@ -27,14 +27,16 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/loginEditTxt"
+            android:id="@+id/emailEditTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
 
         <EditText
             android:id="@+id/passwordEditTxt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginButton"
@@ -78,6 +80,7 @@
             android:text="아직회원이 아니신가요?" />
 
         <Button
+            android:id="@+id/signUpButton"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
