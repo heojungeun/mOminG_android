@@ -1,6 +1,7 @@
 package com.example.moming
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
@@ -43,6 +44,9 @@ class LoginActivity: AppCompatActivity() {
                 .addOnCompleteListener(this){ task ->
                     if (task.isSuccessful){
                         finish()
+                        val intent = Intent(this, Main2Activity::class.java)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                        startActivity(intent)
                     }else{
                         Toast.makeText(this, "로그인에 실패했습니다. 이메일 또는 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
                     }
@@ -56,7 +60,7 @@ class LoginActivity: AppCompatActivity() {
         signUpButton.setOnClickListener {
             val email = getInputEmail()
             val password = getInputPassword()
-            Log.d("id / password", email + "/" + password)
+//            Log.d("id / password", email + "/" + password)
 
             if(password.length < 6 ){
                 Toast.makeText(this, "비밀번호는 6자 이상으로 설정해주세요.", Toast.LENGTH_SHORT).show()
@@ -65,7 +69,7 @@ class LoginActivity: AppCompatActivity() {
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){task ->
-                    Log.d(">>>>>>>", task.result.toString())
+//                    Log.d(">>>>>>>", task.result.toString())
 
                     if (task.isSuccessful){
                         Toast.makeText(this, "회원가입을 성공했습니다. 로그인 버튼을 눌러주세요.", Toast.LENGTH_SHORT).show()
