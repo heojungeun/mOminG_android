@@ -19,6 +19,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+//        activity?.let {
+//            homeViewModel = ViewModelProvider(it).get(HomeViewModel::class.java)
+//            binding.viewModel = viewModel
+//            binding.lifecycleOwner = this
+//
+//            val textView
+//        }
         homeViewModel =
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
@@ -26,6 +34,7 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
         return root
     }
 }
