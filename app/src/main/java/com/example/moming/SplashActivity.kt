@@ -15,11 +15,23 @@ class SplashActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if(auth.currentUser == null){
+            startActivity(Intent(this, LoginActivity::class.java))
+        } else{
+            startActivity(Intent(this, Main2Activity::class.java))
+        }
+
+        /*
         Handler().postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
 
-            if (auth.currentUser == null){//(auth.currentUser == null){
+            if (auth.currentUser == null){//(){
                 startActivity(Intent(this, LoginActivity::class.java))
             }else{
                 startActivity(Intent(this, Main2Activity::class.java))
@@ -27,6 +39,7 @@ class SplashActivity: AppCompatActivity() {
 
             finish()
         },DURATION)
+*/
 
     }
 
